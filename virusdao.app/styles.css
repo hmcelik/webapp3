@@ -1,0 +1,658 @@
+:root {
+    --pageBg: #212121;
+    --orange: #D94E28;
+    --yellow: #FFFA9B;
+    --transOrange: #573526;
+    --referrer: #646464;
+    --reward: #8A7B5A;
+    --grayed: #494949;
+}
+
+body {
+    background-color: #212121;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.orange {
+    color: var(--orange);
+}
+.yellow {
+    color: var(--yellow);
+}
+.white {
+    color: white;
+}
+.gray {
+    color: #878787;
+}
+.othergray {
+    background-color: #424242;
+}
+.transOrangeBg {
+    background-color: var(--transOrange);
+}
+
+
+/*
+    Top Bar
+*/
+#virusPic {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 100px;
+}
+
+.chainSquare {
+    position: absolute; 
+    width: 33px;
+    height: 33px;
+    border-radius: 10px;
+    top: 40px;
+    background-color: var(--grayed);
+    border-width: 0px;
+    text-align: center;
+}
+#chainBsc { 
+    left: 130px
+}
+#chainBsc:hover {
+    /* blank for single chain */
+}
+#chainEth { 
+    left: 170px
+}
+#chainEth:hover {
+    background-color: #5B81E7;
+    cursor:not-allowed;
+}
+#chainAvax { 
+    left: 210px
+}
+#chainAvax:hover {
+    background-color: #CB4B45;
+    cursor:not-allowed;
+}
+#chainFtm { 
+    left: 250px
+}
+#chainFtm:hover {
+    background-color: #000000;
+    cursor:not-allowed;
+}
+.chainSelected {
+    background-color: var(--orange);
+}
+
+.chainPic {
+    width: 22px;
+    position: relative;
+    left: 0px;
+    transform: translateY(0%);
+}
+
+/*
+    Wallet
+*/
+
+#walletCircle {
+    width: 60px;
+    height: 60px;
+    border-radius: 80px;
+    background-color: transparent;   
+    border: 3px solid white; 
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#walletCircle:hover {
+    background-color: var(--transOrange);
+    cursor: pointer;
+}
+
+#walletImage {
+    width: 55px;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+}
+
+#usersWallet {
+    font-weight: 600;
+    font-size: 1.3em;
+    text-align: right;
+    color:white;
+    position: absolute;
+    right: 80px;
+    top: 28px;
+}
+
+/*
+    Menu
+*/
+
+#menuDiv {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+}
+
+.menuButton {
+    height: 50px;
+    width: 270px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    border-width: 0px;
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.menuButton_selected {
+    background-color: var(--orange);
+}
+
+.menuButton:hover {
+    
+}
+.menuButton_unselected {
+    opacity: 0.4;
+}
+.menuButton_unselected:hover {
+    cursor: not-allowed;
+}
+.menuButton_clickable:hover {
+    cursor: pointer;
+    background-color: var(--transOrange);
+}
+
+.menuImage {
+    width: 26px;
+    position: relative;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+    margin-left: 5px;
+
+}
+
+.menuText {
+    font-weight: 600;
+    font-size: large;
+    position: relative;
+    transform: translateY(-15%);
+    margin-left: 37px;
+}
+
+
+/*
+    Stats
+*/ 
+
+#statsDiv {
+    position: absolute;
+    left: 400px; 
+    top: 120px;
+}
+
+.statsBlock {
+    width: 300px;
+    height: 100px;
+   /* border: 2px solid red; */
+    text-align: left;
+    position: absolute;
+}
+
+.statsSquare {
+    width: 85px;
+    height: 85px;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.statsImage {
+    width: 45px; 
+    transform: translateY(20px);
+}
+
+.statsLabel {
+    position: absolute;
+    left: 95px;
+    top: -20px;
+    font-weight: 400;
+    font-size:1.4em;
+}
+
+.stat {
+    position: absolute;
+    color: white;
+    font-size: 1.9em;
+    left: 95px;
+    top: 15px;
+}
+
+/* balance */
+
+#block_balance {
+}
+
+#square_balance {
+    background-color: var(--transOrange);
+}
+
+/* referrer */
+#block_referrer {
+    left: 350px;
+}
+
+#square_referrer {
+    background-color: var(--referrer);
+}
+
+
+/* reward */
+#block_reward {
+    top: 120px;
+    left: 0px;
+}
+
+#square_reward {
+    background-color: var(--reward);
+}
+
+/* referred */
+#block_referred {
+    top: 120px;
+    left: 350px;
+}
+
+#square_referred {
+    background-color: var(--reward);
+}
+
+#stat_referrer {
+    font-weight: 400;
+    font-size: 1.8em;
+    position: absolute;
+    top: 40px;
+}
+
+/* refer others */
+#referBarBlock {
+    position: absolute;
+    top: 365px;
+    left: 400px;
+}
+
+.inputButton {
+    border-radius: 15px 0px 0px 15px;
+    border: 3px solid var(--orange);
+    background-color: var(--pageBg);
+    height: 45px;
+    width: 480px;
+    outline: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding-left: 10px;
+    float: left;
+}
+
+#btn-refer {
+    height: 45px;
+    width: 150px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: var(--orange);
+    border: 3px solid var(--orange);
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+#btn-refer:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+#refer1 {
+    position: absolute;
+    width: 630px;
+    text-align: center; 
+    left: 0px;
+    top: 20px;
+    font-size: 0.9em;
+    font-weight: 200;
+    color: var(--orange);
+}
+
+.error-message {
+    
+}
+
+
+/* table */
+#referralsTable {
+    width: 605px;
+    position: absolute;
+    left: 420px;
+    top: 455px;
+    color: white;
+    border-collapse: collapse;
+}
+
+.labelRow {
+    height: 60px;
+    border-bottom: 3px solid var(--orange);
+}
+
+.tableRow {
+    height: 50px;
+    border-bottom: 2px solid white;
+}
+
+.walletLabel {
+    font-size: 1.3em;
+    font-weight: 600;
+    width: 180px;
+}
+.statLabel {
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: right;
+    width: 190px;
+}
+.statText {
+    font-size: larger;
+    font-weight: 600;
+    text-align: right;
+}
+.walletAddress {
+    font-weight: 300;
+    color: white;
+    font-size: larger;
+}
+.txLabel {
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: right;
+    width: 70px;
+}
+.tx {
+    font-size: 1.0em;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+
+/* pair Address */
+#pairAddressBlock {
+    position: absolute;
+    bottom: 100px;
+    left: 30px;
+    line-height: 0px;
+}
+
+.pairAddress {
+    font-size: 0.9em;
+    color: white;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.pairHref {
+    font-weight: 200;
+    color: white;
+}
+
+.copySquare {
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    left: 170px;
+    background-color: transparent;
+}
+.copySquare:hover {
+    background-color: var(--grayed);
+    cursor: pointer;
+}
+#copyVirus {
+    top: 25px;
+}
+#copyPair {
+    top: 60px;
+}
+
+.copyImage {
+    width: 13px;
+    position: absolute;
+    left: 3px;
+    top: 2px;
+}
+
+.copyImageTick {
+    width: 13px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    visibility: hidden;
+}
+
+/* Logos */
+#cryptologosbar {
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+}
+
+.cryptologo {
+    width: 20px;
+    margin-right: 10px;
+}
+.cryptologo:hover {
+    cursor: pointer;
+}
+
+.tbc {
+    opacity: 0.3;
+} 
+.tbc:hover {
+    cursor: not-allowed;
+}
+
+/* Staking */
+
+#staking {
+    position: absolute;
+    left: -90;
+}
+
+.stakeBlock {
+    width: 300px;
+    height: 300px;
+    background-color: #2B2B2B;
+    border-radius: 50px;
+}
+
+#stakeVirusBlock {
+    position: absolute;
+    left: 500px;
+    top: 200px;
+}
+
+#unstakeVirusBlock {
+    position: absolute;
+    left: 875px;
+    top: 200px;
+}
+
+#stakeRewardsBlock {
+    position: absolute; 
+    left: 500px;
+    top: 565px;
+    height: 140px;
+    width: 685px;
+
+}
+
+#stakeVirusSquare {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    background-color: var(--transOrange);
+}
+
+#unstakeVirusSquare {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    background-color: var(--reward);
+}
+
+.stakeHeading {
+    position: absolute;
+    top: 18px;
+    left: 112px;
+    font-weight: 400;
+    font-size:1.2em;
+}
+.stakeNumber {
+    position: absolute;
+    top: 42px;
+    left: 112px;
+    color: white;
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
+.stakeRectangle {
+    position: absolute;
+    left: 30px;
+    width: 80%;
+    height: 39px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size:1.4em;
+    padding-top: 11px;
+    color: var(--orange);
+}
+
+#stakeButton {
+    color: var(--orange); 
+}
+
+#stakeButton:hover {
+    background-color: var(--orange);
+    cursor:pointer;
+    color: white;
+}
+
+#unstakeButton {
+    color: var(--yellow);
+    background-color: var(--reward);
+}
+#unstakeButton:hover {
+    background-color: var(--yellow);
+    cursor: pointer;
+    color: var(--pageBg);
+}
+
+#stakeRewardsButton {
+    position: absolute;
+    top: 43px;
+    left: 290px;
+    width: 365px;
+    background-color: var(--reward);
+    color: var(--yellow); 
+}
+#stakeRewardsButton:hover {
+    background-color: var(--yellow);
+    cursor: pointer;
+    color: var(--pageBg);
+}
+
+#rewardHeading {
+    position: absolute; 
+}
+
+#unstakeInputID {
+    color: var(--yellow);
+}
+
+.stakeInput {
+    position: absolute;
+    left: 30px;
+    width: 80%;
+    height: 50px;
+    border-radius: 15px;
+    border: 0px solid var(--orange);
+    padding-left: 10px;
+    color: var(--orange);
+    font-weight: 600;
+    font-size:1.2em;
+}
+
+#stakeDetailsBlock {
+    position: absolute;
+    left: 510px;
+    top: 50px;
+    width: 500px;
+}
+
+
+.stakeHeader {
+    color: white;
+    font-size: 1.4em;
+}
+
+.stakeHeaderNumber {
+    position: absolute;
+    font-size: 2.6em;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+#maxStakeButton {
+    border: 0px;
+    background-color: transparent;
+    color: var(--orange);
+    font-size: 1.1em;
+    font-weight: 200;
+    position: absolute;
+    left: 210px;
+    top: 133px;
+    z-index: 5;
+}
+#maxStakeButton:hover {
+    font-weight: 600;
+    cursor: not-allowed; /*pointer; */
+}
+
+#unclaimedRewards {
+    
+}
+
+#unclaimedRewardsNumber {
+    
+}

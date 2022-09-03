@@ -1,0 +1,224 @@
+<head>
+    <title>The Virus Dao</title>
+    <link rel="stylesheet" href="styles.css"></link>
+    <link rel="icon" type="image/x-icon" href="orange.png">
+</head>
+
+<body>
+
+    <img id="viruspic" src="orange.png">
+
+    <button class="chainSquare chainSelected" id="chainBsc">
+        <img class="chainPic" src="bsc_white.png">
+    </button>
+
+    <button class="chainSquare" id="chainEth">
+        <img class="chainPic" src="eth_white.png">
+    </button>
+
+    <button class="chainSquare" id="chainAvax">
+        <img class="chainPic" src="avax_white.png">
+    </button>
+
+    <button class="chainSquare" id="chainFtm">
+        <img class="chainPic" src="ftm_white.png">
+    </button>
+
+    <button id="walletCircle">
+        <img id="walletImage" src="orangeWallet.png">
+    </button>
+    <div id="usersWallet">Not Connected</div>
+
+    <div id="menuDiv" style="display: block">
+
+        <button id="btn_menu" class="menuButton menuButton_clickable">
+            <img src="home.png" class="menuImage">
+            <h3 class="menuText">Home (BSC)</h3>
+        </button>
+
+        <button id="btn_docs" class="menuButton menuButton_clickable">
+            <img src="white.png" class="menuImage">
+            <h3 class="menuText">Docs</h3>
+        </button>
+
+        <button id="btn_stake" class="menuButton menuButton_clickable">
+            <img src="pig.png" class="menuImage">
+            <h3 class="menuText">Stake (Coming Soon)</h3>
+        </button>
+        
+        <button class="menuButton menuButton_unselected">
+            <img src="vote.png" class="menuImage">
+            <h3 class="menuText">Vote (Coming Soon)</h3>
+        </button>
+
+    </div>
+
+    <div id="pairAddressBlock">
+        <h6 class="pairAddress">VIRUS:&nbsp&nbsp
+            <a id="pair" class="pairHref" href="https://bscscan.com/token/0x78618c5114Cf2B71A3fe0Af9d7c5aEb129E90487" target="_blank" rel="noopener noreferrer">
+                0x7861...0487
+            </a>
+        </h6> 
+        <button class="copySquare"  id="copyVirus">
+            <img src="copy.png" class="copyImage" id="virusClipboard">
+            <img src="tick_orange.png" class="copyImageTick" id="virusTick">
+        </button>
+        <h6 class="pairAddress">Pair:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a id="pair" class="pairHref" href="https://bscscan.com/address/0x30D85Bb8b68B3425F7f3433fc2b1596CA873da89" target="_blank" rel="noopener noreferrer">
+                0x30D...da89
+            </a>
+        </h6>
+        <button class="copySquare"  id="copyPair">
+            <img src="copy.png" class="copyImage" id="pairClipboard">
+            <img src="tick_orange.png" class="copyImageTick" id="pairTick">
+        </button>
+        
+    </div>
+
+    <div id="cryptologosbar">
+        <a href="https://bscscan.com/address/0x78618c5114Cf2B71A3fe0Af9d7c5aEb129E90487" target="_blank" rel="noopener noreferrer" style="color: transparent">
+        <img class="cryptologo" src="cryptologos/bscscan.png">
+        </a>
+
+        <a href="https://t.me/virusdaoen" target="_blank" rel="noopener noreferrer" style="color: transparent">
+            <img class="cryptologo" src="cryptologos/telegram.png">
+        </a>
+
+        <a href="https://twitter.com/virusdaoapp" target="_blank" rel="noopener noreferrer" style="color: transparent">
+        <img class="cryptologo" src="cryptologos/twitter.png">
+        </a>
+
+        <a href="https://coinmarketcap.com" target="_blank" rel="noopener noreferrer" style="color: transparent">
+        <img class="cryptologo tbc" src="cryptologos/cmc.png">
+        </a>
+
+        <a href="https://coingecko.com" target="_blank" rel="noopener noreferrer" style="color: transparent">
+        <img class="cryptologo tbc" src="cryptologos/coingecko.png">
+        </a>
+
+    </div>
+
+    <div id="homepage">
+
+    <div id="statsDiv">
+
+        <div class="statsBlock" id="block_balance">
+            <div class="statsSquare" id="square_balance">
+                <img src="balance.png" class="statsImage">
+            </div>
+            <h4 class="statsLabel orange">Total balance</h4>
+            <h2 class="stat" id="stat_balance">0</h2>
+        </div>
+
+        <div class="statsBlock" id="block_referrer">
+            <div class="statsSquare" id="square_referrer">
+                <img src="referrer.png" class="statsImage">
+            </div>
+            <h4 class="statsLabel gray">Your referrer</h4>
+            <a class="stat" id="stat_referrer" href="https://bscscan.com" target="_blank" rel="noopener noreferrer">Not Referred</a>
+        </div>
+
+        <div class="statsBlock" id="block_reward">
+            <div class="statsSquare" id="square_reward">
+                <img src="rewards.png" class="statsImage">
+            </div>
+            <h4 class="statsLabel yellow">Referral rewards</h4>
+            <h2 class="stat" id="stat_reward">0</h2>
+        </div>
+
+        <div class="statsBlock" id="block_referred">
+            <div class="statsSquare" id="square_referred">
+                <img src="referrals.png" class="statsImage">
+            </div>
+            <h4 class="statsLabel yellow">Total referred</h4>
+            <h2 class="stat" id="stat_reffered">0</h2>
+        </div>
+    </div>
+
+    <div id="referBarBlock">
+        <input type="text" id="referBar" placeholder="0xAddress" class="inputButton">
+        <button id="btn-refer">Refer Address</button>
+        <h6 id="refer1"></h6>
+    </div>
+
+   
+
+    <table id="referralsTable">
+        
+        <tr class="labelRow">
+            <td class="walletLabel"> Wallet Referred</td>
+            <td class="statLabel"> Bought</td>
+            <td class="statLabel orange"> Reward</td>
+            <td class="txLabel"></td>
+        </tr>
+        
+    </table>
+
+    </div>
+
+    <!-- NEW BLOCK -->
+    <div id="staking" style="display: none;">
+
+        <div id="stakeDetailsBlock">
+            <h4 class="stakeHeader">
+                APY (estimated)
+            </h4>
+            <h2 class="stakeHeaderNumber" style="top: 30px; left: 0px;">
+                600%
+            </h2>
+
+            <h4 class="stakeHeader" style="position: absolute; left: 190px; top: 0px;">
+                Total $VIRUS Staked
+            </h4>
+            <h2 id="totalvirusstaked" class="stakeHeaderNumber"  style="left: 190px; top: 30px;">
+                0 
+            </h2>
+        </div>
+
+
+        <div class="stakeBlock" id="stakeVirusBlock">
+
+            <div class="statsSquare" id="stakeVirusSquare" style="width: 75px; height: 75px">
+                <img src="balance.png" class="statsImage" style="width: 40px;">
+            </div>
+            <h4 class="stakeHeading orange" id="virusBalanace">$VIRUS Balance</h4>
+            <h2 class="stakeNumber" id="stake_balance">0</h2>
+            <input class="stakeInput othergray" id="stakeInputID" placeholder="0" style="top: 120px;">
+           <!-- <button id="maxStakeButton"> MAX </button> -->   
+        </input>
+            <div class="stakeRectangle transOrangeBg" id="stakeButton" style="top: 180px;">
+                Stake
+            </div>
+        </div>
+
+        <div class="stakeBlock" id="unstakeVirusBlock">
+            <div class="statsSquare" id="unstakeVirusSquare" style="width: 75px; height: 75px">
+                <img src="yellow_pig.png" class="statsImage" style="width: 40px;">
+            </div>
+            <h4 class="stakeHeading yellow">Staked $VIRUS</h4>
+            <h2 class="stakeNumber"  id="stake_staked">0</h2>
+            <input class="stakeInput othergray" id="unstakeInputID" placeholder="0" style="top: 120px;"></input>
+            <div class="stakeRectangle transOrangeBg" id="unstakeButton" style="top: 180px;">
+                Unstake
+            </div>
+        </div>
+        
+        <div class="stakeBlock" id="stakeRewardsBlock" style="display: none">
+            <div class="statsSquare" id="unstakeVirusSquare" style="width: 75px; height: 75px">
+                <img src="rewards.png" class="statsImage" style="width: 40px;">
+            </div>
+            <h4 class="stakeHeading yellow" id="unclaimedRewards">Unclaimed Rewards</h4>
+            <h2 class="stakeNumber" id="unclaimedRewardsNumber">0</h2>
+            <div class="stakeRectangle" id="stakeRewardsButton" >
+                Claim Rewards
+            </div>
+        </div>
+        
+
+    </div>
+ 
+    
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src="dapp.js"></script>
+</body>
